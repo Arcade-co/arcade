@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARCADE Web Design</title>
+  <link rel="stylesheet" href="mobile-view.css" />
+</head>
+<body>
+
+<!-- Header with Hamburger Menu -->
+<header>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <nav id="navMenu" class="nav-menu">
+    <!-- Close Button -->
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
+    <ul>
+      <li><a href="#section1">Home</a></li>
+      <li><a href="#section2">Services</a></li>
+      <li><a href="#section3">Portfolio</a></li>
+      <li><a href="#section4">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Section 1 - Video Background -->
+<section id="section1">
+  <video autoplay muted loop id="bgVideo">
+    <source src="assets/herobg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <h1>Welcome to ARCADE</h1>
+    <p>Crafting Elegant and Professional Websites</p>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section2">
+  <h2>Our Services</h2>
+  <p>We create beautiful and functional websites for businesses and individuals.</p>
+</section>
+
+<!-- Section 3 -->
+<section id="section3">
+  <h2>Portfolio</h2>
+  <p>Check out some of our recent projects and designs.</p>
+</section>
+
+<!-- Section 4 -->
+<section id="section4">
+  <h2>Contact Us</h2>
+  <p>Get in touch and let's build something amazing together!</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 ARCADE. All rights reserved.</p>
+</footer>
+
+<!-- Link to JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

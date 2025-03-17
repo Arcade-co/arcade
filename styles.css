@@ -1,0 +1,655 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .strike {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .strike::after {
+    content: "";
+    position: absolute;
+    left: 20px;  /* Extends the line to the left */
+    right: 15px; /* Extends the line to the right */
+    top: 50%;
+    background: red;
+    
+  }
+  
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    overflow: hidden; /* Ensure the video does not overflow */
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+    z-index: -1; /* Place the video behind other content */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the video */
+  }
+  
+  .h1 {
+    color: #FFD900;
+    position:absolute;
+  }
+  
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 225px;
+    padding-right: 225px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(19px) saturate(16%);
+    -webkit-backdrop-filter: blur(19px) saturate(16%);
+    background-color: rgba(17, 25, 40, 0.64);
+    /* border-radius: 12px; */
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    z-index: 1000;
+  }
+  
+  nav .logo {
+    margin-right: auto;
+    
+  }
+  
+  nav .logo img {
+    height: 25px; /* Adjust the height as needed */
+    background: none; /* Ensure no background color is applied */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ffd900;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    max-width: 80%;
+    line-height: 1.2;
+    padding-left: 225px;
+    margin-bottom: 0px;
+    text-align: left;
+    align-items: left;
+  }
+  
+  .hero-content h3 {
+    max-width: 80%;
+    line-height: 1.2;
+    padding-left: 225px;
+    text-align: left;
+    align-items: left;
+    font-size: small;
+    padding-top: 10px;
+    color: #FFD900;
+    margin-top: -8px;
+    margin-left: 2px;
+  }
+  
+  .about{
+    background-image: url('about.png');
+    background-position: center;
+    background-size: auto;
+    background-size:cover;
+    height: 100vh;
+    padding-left: 225px;
+    padding-right: 225px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 150px;
+    
+  }
+
+  .about h2{
+    padding-top: 20%;
+    color: #FFD900;
+    font-size: 36px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    position: sticky;
+    animation: fadeup both;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+  }
+  
+
+  .strike {
+    text-decoration: line-through;
+  }
+  
+  section {
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .services {
+    background: #FFD900;
+    color: black;
+    padding-left: 100px;
+    padding-right: 125px;
+  }
+  .service-image {
+    position: relative;
+    left: 75px;
+    top: -50px;
+  }
+  .services table {
+    justify-content: left;
+  }
+  
+  
+  /* Section Styling */
+  
+  
+  .services h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  #twd {
+    padding-left: 125px;
+  }
+  
+  /* Service Box Container */
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 520px;
+    justify-content: left;
+    padding-left: 125px;
+  }
+  
+  /* Individual Service Box */
+  .service-box {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid black; /* Black border */
+    padding: 20px;
+    text-align: left;
+    width: 250px;
+  }
+  
+  
+  
+  /* Service Title */
+  .service-box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+  }
+  
+  
+  .portfolio h2 {
+    margin-bottom: 40px;
+  }
+  
+  .device {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 40px;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+  }
+  
+  
+  
+
+
+/* SCROLL EFFECT */
+.scroll{
+
+    background-image: url("grp1.png");
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 295vh;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+
+}
+
+.hand{
+    align-items: center;
+    padding-left: 13px;
+    padding-top: 15px;
+    top: 55px;
+    position: sticky;
+    z-index: 10;
+}
+/* END OF SCROLL EFFECT */
+
+/*HIDDEN*/
+.hidden {
+  background-image: url('types.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding-left: 225px;
+  padding-right: 225px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.hidden {
+  display: flex;
+  justify-content: space-between; /* Push left and right to opposite ends */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the screen */
+  padding: 0 80px; /* Add padding on both sides */
+  padding-top: 70px;
+}
+
+
+.left-content{
+  text-align: left;
+  color: #FFD900;
+  animation: fadeleft both;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
+}
+.right-content{
+  text-align: right;
+  color: #FFD900;
+  animation: faderight both;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
+}
+
+.right-content p{
+  text-align: right;
+}
+
+
+@keyframes fadeleft{
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(10px); /* Start with blur */
+  }
+  30% {
+    opacity: 1;
+    filter: blur(5px); /* Blurry at 30% */
+  }
+  70% {
+    filter: blur(5px); /* Maintain blur till 90% */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px); /* Fully clear at the end */
+  }
+}
+
+@keyframes faderight{
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(10px); /* Start with blur */
+  }
+  30% {
+    opacity: 1;
+    filter: blur(5px); /* Blurry at 30% */
+  }
+  70% {
+    filter: blur(5px); /* Maintain blur till 90% */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px); /* Fully clear at the end */
+  }
+}
+
+@keyframes fadeup{
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(10px); /* Start with blur */
+  }
+  30% {
+    opacity: 1;
+    filter: blur(5px); /* Blurry at 30% */
+  }
+  70% {
+    filter: blur(5px); /* Maintain blur till 90% */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px); /* Fully clear at the end */
+  }
+}
+
+/* END OF HIDDEN */
+
+.trust {
+  height: 75vh;
+  background-image: url('quotes.png');
+  background-repeat: no-repeat;
+  background-position: center 30vh;
+  padding-left: 325px;
+  padding-right: 325px;
+  padding-bottom: 150px;
+  line-height: 1.5;
+}
+
+
+.trust h2 {
+  text-align: center;
+  color: #FFD900;
+  font-size: 56px;
+  animation: fadeup both;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+
+.trust p {
+  color: #FFD900;
+  animation: fadeup both;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+  text-align: center;
+  justify-content: center;
+
+}
+.haya {
+  margin-bottom: 5px;
+}
+#rating {
+  margin-top: 5px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: -50px;
+  margin-bottom: 20px;
+  background-color: #FFD900;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.arcade img {
+  margin-left: -125px; /* Move the image 100px to the left */
+}
+
+.contact {
+  background-color: #FFD900;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.contact h2 {
+  align-items: flex-start;
+  padding-left: 15px;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 3px;
+}
+
+.contact p {
+  align-items: flex-start;
+  padding-left: 15px;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 3px;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+/* FORM */
+
+.form-container {
+  background-color: #ffd900;
+  padding: 20px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+/* Input Rows */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  resize: none;
+}
+
+textarea {
+  width: 580px;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background 0.3s;
+  float: left;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+
+/* Form Container */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background-color: #000;
+  color: #ffc800;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  padding-left: 80px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 150px;
+  margin-right: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ffc800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #ffc800;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-button span {
+  font-size: 18px;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+}
+
+.footer-section.three {
+  margin-left: auto; /* Align section to the right */
+  text-align: right;
+}
+.footer-section.three p{
+  margin-left: auto; /* Align section to the right */
+  text-align: right;
+}
+
+.footer-bottom {
+  background-color: #000;
+  color: #ffc800;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-left: 60px;
+}
+
+
+
+
+
+
+/* Scroll bar */
+/* Modern and sleek scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #0000004f; /* Background of the scrollbar track */
+  border-radius: 55px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 55px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #00000053; /* Thumb and track colors */
+}
+/* end of Scroll bar */
+
+
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+/* General styles for mobile responsiveness */
+
