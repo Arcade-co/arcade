@@ -126,11 +126,12 @@ body {
     padding-left: 225px;
     text-align: left;
     align-items: left;
-    font-size: small;
+    font-size: 22px;
     padding-top: 10px;
     color: #FFD900;
     margin-top: -8px;
     margin-left: 2px;
+    font-weight: 300;
   }
   
   .about{
@@ -145,6 +146,8 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     padding-top: 150px;
+    margin-top: 120px;
+    margin-bottom: 120px;
     
   }
 
@@ -297,8 +300,8 @@ body {
   padding-left: 225px;
   padding-right: 225px;
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .hidden {
@@ -402,6 +405,7 @@ body {
   padding-right: 325px;
   padding-bottom: 150px;
   line-height: 1.5;
+  margin-top: 40px;
 }
 
 
@@ -422,6 +426,9 @@ body {
   animation-range: entry 0 cover 30%;
   text-align: center;
   justify-content: center;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
 
 }
 .haya {
